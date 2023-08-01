@@ -8,6 +8,7 @@ padding:0;
 margin:0;
 box-sizing: border-box;
 
+
 }
 
 :root {
@@ -50,7 +51,7 @@ ul{
 }
 
 .container{
-    max-width: 1180px;
+    max-width: 1300px;
     margin-inline:auto;
     overflow: hidden;
 
@@ -71,7 +72,8 @@ nav {
 .main-nav{
 
     justify-content: space-between;
-    padding-block: 8px;
+    padding-block:20px;
+  
 }
 
 .company-logo {
@@ -87,7 +89,7 @@ nav {
         #FF4500 75%,
         #FF0000 100%
     );
-    overflow: hidden;
+    
 }
 
 .company-logo img {
@@ -174,6 +176,45 @@ nav {
     background: linear-gradient(45deg, #005eff, #0039a6);
     /* You can adjust the colors and angle as per your preference */
 }
+
+
+main{
+
+    padding-block:20px;
+
+    padding-top: 10%;
+    margin-top:10%;
+    background: linear-gradient(45deg, #f0f0f0, #e5e5e5);
+
+
+}
+
+.card-container {
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap:20px;
+    align-items: start;
+}
+
+
+.cards{
+
+    width:360px;
+    min-height: 400px;
+    box-shadow:0 0 4px #d4ecff;
+    border-radius:4px;
+    cursor:pointer;
+    background-color: #f0f0f0;
+    overflow:hidden;
+}
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
 
