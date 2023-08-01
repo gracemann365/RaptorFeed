@@ -1,61 +1,53 @@
-const api_key= "2f5afda68e7f488c8d46702dba6defbd";
-const url ="https://newsapi.org/v2/everything?q=";
-
+const apikey = "e85c92f9df8928fc670f4cceedb68b4e";
+const gnewsUrl = "https://gnews.io/api/v4/search?q=technology&apikey=" + apikey;
 
 window.addEventListener("load", () => fetchNews("India"));
 
-async function fetchNews(query){
+async function fetchNews(query) {
+  const gnewsRes = await fetch(`${gnewsUrl}&q=${query}`);
+  const gnewsData = await gnewsRes.json();
 
-
-    const res= await fetch(`${url}${query}&apiKey=${api_key}`);
-    const data = await res.json();
-    bindData(data.articles);
+  const articles = gnewsData.articles;
+  bindData(articles);
 }
-
 
 function bindData(articles) {
+  const cardsContainer = document.getElementById("cards-container");
+  const newsCardTemplate = document.getElementById("template-news-card");
 
-    const cardsContainer = document.getElementById("cards-container");
-    const newsCardTemplate = document.getElementById("template-news-card");
+  cardsContainer.innerHTML = "";
 
-    cardsContainer.innerHTML="";
-
-    articles.forEach((article)=>{
-
-        if(!article.urlToImage) return;
-        const cardClone = newsCardTemplate.content.cloneNode(true);
-        fillDataInCard(cardClone,article);
-        cardsContainer.appendChild(cardClone);
-    });
+  articles.forEach((article) => {
+    if (!article.image) return;
+    const cardClone = newsCardTemplate.content.cloneNode(true);
+    fillDataInCard(cardClone, article);
+    cardsContainer.appendChild(cardClone);
+  });
 }
 
-function fillDataInCard(cardClone , article){
+function fillDataInCard(cardClone, article) {
+  const newsImg = cardClone.querySelector("#news-img");
+  const newsTitle = cardClone.querySelector("#news-title");
+  const newsSource = cardClone.querySelector("#news-source");
+  const newsDesc = cardClone.querySelector("#news-desc");
 
-    const newsImg = cardClone.querySelector('#news-img');
-    const newsTitle = cardClone.querySelector('#news-title');
-    const newsSource = cardClone.querySelector('#news-source');
-    const newsDesc = cardClone.querySelector('#news-desc');
+  newsImg.src = article.image;
+  newsTitle.innerHTML = article.title;
+  newsDesc.innerHTML = article.description;
 
+  const date = new Date(article.publishedAt).toLocaleString("en-US", {
+    timeZone: "Asia/Jakarta",
+  });
 
-    newsImg.src = article.urlToImage;
-    newsTitle.innerHTML = article.title;
-    newsDesc.innerHTML = article.description;
+  newsSource.innerHTML = `${article.source.name} . ${date}`;
 
-
-
-    const date = new Date(article.publishedAt).toLocaleString("en-US",{timeZone: "Asia/Jakarta"});
-
-    newsSource.innerHTML=`${article.source.name} . ${date}`;
-
-    cardClone.firstElementChild.addEventListener('click', ()=> {
-       
-        window.open(article.url, "_blank");
-    });
-
-   
-
+  cardClone.firstElementChild.addEventListener("click", () => {
+    window.open(article.url, "_blank");
+  });
 }
 
+// self-note david listen to me son : Rest of the code remains the same...
+//this API change is the biggest thing I have ever done
 //power of modular code writing wow im impressed , never thought code reusability is such a boon.
 
 let curSelectedNav = null;
