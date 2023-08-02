@@ -456,6 +456,8 @@ main {
           #ff0000 100%
         );
         border: 2px solid black;
+
+        margin-left: 30px;
       }
       
       .search-bar {
@@ -490,7 +492,8 @@ main {
   font-family: 'Fredoka', sans-serif;
   border: 1px solid black;
   display: block; /* Display the button as a block element to stack it below the search input */
-  margin: 5px auto; /* Center the search button and add spacing between the search input and button */
+  margin: 5px auto;
+  margin-right: 5px; /* Center the search button and add spacing between the search input and button */
 }
 
       
@@ -567,4 +570,3 @@ main {
     transform: none; /* Reset the transformation on hover */
   }
 }
-
