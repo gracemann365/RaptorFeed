@@ -2,7 +2,8 @@
 # RaptorFeed
 #### Multi Section Grid View News App
 
-![RaptorFeed Logo](RaptorFeed-LOGO.png)
+![RaptorFeed Logo](![RaptorFeed-LOGO](https://github.com/gracemann365/RaptorFeed/assets/95162905/0289bf52-92b2-4dc3-ba2a-d99e2494d683)
+)
 
 
 
@@ -20,12 +21,14 @@ RaptorFeed is a multi-section grid view news app that provides a seamless browsi
 
 ## Preview
 
-![RaptorFeed Desktop Preview](desk-view.png)
+![RaptorFeed Desktop Preview](![desk-view](https://github.com/gracemann365/RaptorFeed/assets/95162905/9722c0a3-0ba1-4916-8598-f1272378240b)
+)
 <br>
 <br>
 <br>
 <br>
-![RaptorFeed Mobile Preview](mobile-view.png)
+![RaptorFeed Mobile Preview](![mobile-view](https://github.com/gracemann365/RaptorFeed/assets/95162905/691c8225-e00a-4186-8c0b-829ebdf990d2)
+)
 
 ## Technologies Used
 
