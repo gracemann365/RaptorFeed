@@ -17,15 +17,15 @@ RaptorFeed is a multi-section grid view news app that provides a seamless browsi
 - **Responsive Design:** While primarily built for desktop users, RaptorFeed has been casually adapted for immediate use on mobile devices. The app offers a satisfactory mobile experience with its swipe-down interactions and responsive layout.
 
 ## Preview
+![desk-view](https://github.com/gracemann365/RaptorFeed/assets/95162905/05b077d5-8443-4166-8641-7e87a3798479)
 
-![RaptorFeed Desktop Preview](![desk-view](https://github.com/gracemann365/RaptorFeed/assets/95162905/9722c0a3-0ba1-4916-8598-f1272378240b)
-)
+
 <br>
 <br>
 <br>
 <br>
-![RaptorFeed Mobile Preview](![mobile-view](https://github.com/gracemann365/RaptorFeed/assets/95162905/691c8225-e00a-4186-8c0b-829ebdf990d2)
-)
+
+![mobile-view](https://github.com/gracemann365/RaptorFeed/assets/95162905/3555ce65-06f3-41be-aec3-2b401a310edb)
 
 ## Technologies Used
 
