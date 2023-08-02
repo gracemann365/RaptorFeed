@@ -1,10 +1,7 @@
 
 # RaptorFeed
 #### Multi Section Grid View News App
-
-![RaptorFeed Logo](![RaptorFeed-LOGO](https://github.com/gracemann365/RaptorFeed/assets/95162905/0289bf52-92b2-4dc3-ba2a-d99e2494d683)
-)
-
+![RaptorFeed-LOGO](https://github.com/gracemann365/RaptorFeed/assets/95162905/3cb33dd5-403b-4c3e-be32-1b137ea313ac)
 
 
 RaptorFeed is a multi-section grid view news app that provides a seamless browsing experience for desktop users while offering an enjoyable swipe-down interaction for mobile users. The app is designed using vanilla front-end technologies, without relying on any frameworks, and it fetches news data from a REST API in JSON format.
