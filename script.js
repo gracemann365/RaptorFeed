@@ -1,5 +1,5 @@
 const apikey = "e85c92f9df8928fc670f4cceedb68b4e";
-const gnewsUrl = "https://gnews.io/api/v4/search?q=technology&apikey=" + apikey;
+const gnewsUrl = "https://gnews.io/api/v4/search?q=technology&lang=en&apikey=" + apikey;
 
 window.addEventListener("load", () => fetchNews("India"));
 

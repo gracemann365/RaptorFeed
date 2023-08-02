@@ -54,16 +54,20 @@ ul{
 
 }
 
+/* Define the yellow gradient */
 nav {
-    background: linear-gradient(45deg, #ffea00, #ff8c00);
-    box-shadow: 0 0 4px #bbd0e2;
+    background: linear-gradient(45deg, #ffff00, #ffd700);
+    box-shadow: 4 4 4px #ffffff;
     position: fixed;
     top: 0;
     z-index: 99;
     left: 0;
     right: 0;
     /* Add any other necessary styles for your navigation here */
-}
+  }
+  
+
+
 
 .main-nav{
 
@@ -85,6 +89,8 @@ nav {
         #FF4500 75%,
         #FF0000 100%
     );
+
+    border: 2px solid black;
     
 }
 
@@ -107,39 +113,6 @@ nav {
 
 
 
-.hover-link {
-    color: rgb(0, 0, 0);
-    background: conic-gradient(
-        from 0deg,
-        #ff0000 0%,
-        #ff4500 25%,
-        #ff0000 50%,
-        #ff4500 75%,
-        #ff0000 100%
-    );
-    cursor: pointer;
-    border-radius: 6px;
-    padding: 8px 16px;
-    transition: background 0.3s ease;
-    /* Add any other necessary styles */
-}
-
-.hover-link:hover {
-    background: conic-gradient(
-        from 0deg,
-        #ff4500 0%,
-        #ff0000 25%,
-        #ff4500 50%,
-        #ff0000 75%,
-        #ff4500 100%
-    );
-    /* You can adjust the colors and angle as per your preference */
-}
-
-
-.hover-link:active{
-    color:red;
-}
 
 .search-bar{
     height:32px;
@@ -165,6 +138,7 @@ nav {
     border-radius: 6px;
     cursor: pointer;
     font-family: 'Fredoka', sans-serif;
+    border: 1px solid black;
 }
 
 
@@ -174,15 +148,14 @@ nav {
 }
 
 
-main{
-
-    padding-block:20px;
-
+main {
+    padding-block: 20px;
     margin-top: 190px;
-    background: linear-gradient(45deg, #000000, #b6b6b6);
-
-
-}
+    background: linear-gradient(45deg, #000, #444);
+  
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  }
+  
 
 .cards-container {
 
@@ -200,13 +173,13 @@ main{
     min-height: 400px;
     max-height: 400px;
     box-shadow:0 0 4px #ffc905;
-    border-radius:4px;
+    border-radius:16px;
     cursor:pointer;
     background-color: #f0f0f0;
     overflow:hidden;
     transition: all 0.5s ease;
     margin: 10px 10px;
-    size;
+    border: 2px solid black;
 }
 
 .card:hover {
@@ -230,38 +203,172 @@ main{
 
 }
 
-.news-source{
+.news-source {
+    color: #000bd3; /* Choose a color that complements your design */
+    font-family: 'Source Code Pro', monospace; /* Use the Source Code Pro font */
+    font-weight: bold;
+    text-align: center; /* Center the text horizontally */
+    padding: 8px 12px; /* Add padding for better appearance */
+    border-radius: 20px; /* Add rounded corners for a special effect */
+    background: linear-gradient(45deg, #d0d0d0, #f5f5f5); /* Silver gradient background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    display: flex; /* Use flexbox to center the element */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    margin: 12px auto; /* Add margin to center the element horizontally */
+  }
   
-    margin-block:12px ;
-    
-}
 
-#news-title{
-    font-weight: 600;
-    color:#de2609;
+  #news-title {
+    font-weight: 700;
+    font-size: 18px; /* Decrease the font size to 25px */
+    color: #de2609;
     font-family: 'Source Code Pro', monospace;
+    text-align: center; /* Center the text horizontally */
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: inline-block; /* Use inline-block to wrap the text */
+    word-wrap: break-word; /* Allow long words to break to the next line */
+    hyphens: auto; /* Add hyphens for word-breaking when necessary */
+  }
+  
+  
+#news-title:hover {
+  transform: scale(1.05); /* Apply a scaling effect on hover for a slight zoom-in animation */
 }
 
-#news-desc{
-    color:black;
+
+#news-desc {
+    color: black;
     font-family: 'Fredoka', sans-serif;
+    padding: 10px; /* Add equal padding on all sides */
+    text-align: justify; /* Justify the text for better word wrapping */
+    line-height: 1.5; /* Set the line height to improve readability */
+    font-size: 13.5px;;
+   
+  }
+  
+
+
+
+
+.hover-link {
+    position: relative;
+    color: rgb(0, 0, 0);
+    background: conic-gradient(
+        from 0deg,
+        #c0c0c0 0%,
+        #d3d3d3 25%,
+        #c0c0c0 50%,
+        #d3d3d3 75%,
+        #c0c0c0 100%
+    );
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 8px 16px;
+    transition: background 0.3s ease;
+    border: 2px solid black;
+    /* Add any other necessary styles */
+}
+
+.hover-link:hover {
+    background: conic-gradient(
+        from 0deg,
+        #d3d3d3 0%,
+        #c0c0c0 25%,
+        #d3d3d3 50%,
+        #c0c0c0 75%,
+        #d3d3d3 100%
+    );
+    /* You can adjust the colors and angle as per your preference */
+}
+
+.hover-link::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    z-index: -1;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hover-link:hover::before {
+    opacity: 1;
+}
+
+.hover-link:active::before {
+    animation: flashEffect 0.5s ease infinite;
+}
+
+@keyframes flashEffect {
+    0%, 50% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
 }
 
 
-.nav-items.active {
 
-    background: linear-gradient(45deg, #ff0000, #ff3300, #ff6600, #ff9900, #ffcc00, #ff9900, #ff6600, #ff3300, #ff0000);
-    background-size: 400% 400%;
-    animation: gradientAnimation 5s ease infinite;
+
+.nav-items {
+  position: relative;
+  background: linear-gradient(45deg, #c0c0c0, #d3d3d3);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid black; /* Add black border to all boxes */
+  padding: 8px 16px;
+  transition: background 0.3s ease;
+  /* Add any other necessary styles */
 }
 
-@keyframes gradientAnimation {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+.nav-items:hover {
+  background: linear-gradient(45deg, #d3d3d3 0%, #c0c0c0 25%, #d3d3d3 50%, #c0c0c0 75%, #d3d3d3 100%);
+  /* You can adjust the colors and angle as per your preference */
 }
 
+.nav-items::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  z-index: -1;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
+.nav-items:hover::before {
+  opacity: 1;
+}
+
+.nav-items:active {
+  color: silver; /* Set the font color to silver during the active state */
+}
+
+.nav-items:active::before {
+  animation: flashEffect 0.5s ease infinite;
+}
+
+@keyframes flashEffect {
+  0%, 50% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
 
 
 
@@ -329,21 +436,135 @@ main{
    
       nav {
         text-align: left; /* Align the content to the left on smaller screens */
+        border: 3px solid black;
+        border-radius: 4px;
     }
 
     .company-logo {
-        margin-top: 0; /* Remove the top margin to stack the logo with the search bar */
-    }
+        width: 120px; /* Set the width of the company logo */
+        height: 120px; /* Set the height of the company logo */
+        margin-top: 20px; /* Add a top margin */
+        margin-left: 10px; /* Add a left margin */
+        margin-bottom: 10px; /* Add a bottom margin */
+        border-radius: 50%; /* Make the logo circular */
+        background: conic-gradient(
+          from 150deg,
+          #ff0000 0%,
+          #ff4500 25%,
+          #ffa500 50%,
+          #ff4500 75%,
+          #ff0000 100%
+        );
+        border: 2px solid black;
+      }
+      
+      .search-bar {
+  text-align: center; /* Center the search input and button on smaller screens */
+  margin-top: 5px; /* Adjust the spacing between logo and search bar on smaller screens */
+  margin-left: 20px; /* Add left margin */
+  margin-right: 20px; /* Add right margin */
+}
 
-    .search-bar {
-        text-align: center; /* Center the search input and button on smaller screens */
-        margin-top: 10px; /* Adjust the spacing between logo and search bar on smaller screens */
-    }
+.news-input {
+  width: 260px; /* Set the width of the search input */
+  height: 32px; /* Set the height of the search input */
+  padding-inline: 12px;
+  border-radius: 6px;
+  border: 3px solid #2f2d2d;
+  background: linear-gradient(45deg, #f0f0f0, #d8d8d8);
+  margin-right: 10px; /* Add right margin to create spacing between search input and button */
+  padding-left: 40px; /* Add padding on the left for the icon image */
+  background-image: url("icon/logo_RaptorFeed.png"); /* Add the icon image as background */
+  background-size: 20px; /* Set the size of the icon image */
+  background-repeat: no-repeat; /* Prevent repeating of the icon image */
+  background-position: 10px center; /* Set the position of the icon image */
+}
 
-    .search-button {
-        display: block; /* Display the button as a block element to stack it below the search input */
-        margin-top: 10px; /* Adjust the spacing between search input and button */
-    }
+.search-button {
+  background: linear-gradient(45deg, #0099ff, #005eff);
+  color: white;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  border: 1px solid black;
+  display: block; /* Display the button as a block element to stack it below the search input */
+  margin: 5px auto; /* Center the search button and add spacing between the search input and button */
+}
+
+      
+
+
+
+
+
+
 
 
 }
+
+@media only screen and (max-width: 600px) {
+
+
+    .search-bar {
+        display: block; /* Change to display block to stack the search input and button */
+        text-align: center; /* Center the search input and button on smaller screens */
+      }
+    
+      .news-input {
+        width: 200px;
+        height: 105%;
+        padding-inline: 12px;
+        border-radius: 6px;
+        border: 3px solid #2f2d2d;
+        background: linear-gradient(45deg, #f0f0f0, #d8d8d8);
+        display: block; /* Change to display block to stack the search input below the logo */
+        margin: 0 auto; /* Center the search input */
+        margin-bottom: 5px; /* Add some space between the logo and search input */
+      }
+    
+      .search-button {
+        background: linear-gradient(45deg, #0099ff, #005eff);
+        color: white;
+        padding: 8px 24px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-family: 'Fredoka', sans-serif;
+        border: 1px solid black;
+        display: block; /* Change to display block to stack the search button below the input */
+        margin: 0 auto; /* Center the search button */
+      }
+
+
+
+  nav {
+    text-align: left; /* Align the content to the left on smaller screens */
+  }
+
+ 
+
+  .search-bar {
+    text-align: center; /* Center the search input and button on smaller screens */
+    margin-top: 10px; /* Adjust the spacing between logo and search bar on smaller screens */
+  }
+
+  .search-button {
+    display: block; /* Display the button as a block element to stack it below the search input */
+    margin-top: 10px; /* Adjust the spacing between search input and button */
+  }
+
+  /* Additional styles for the card layout on mobile screens */
+  .cards-container {
+    justify-content: center; /* Center the cards horizontally */
+  }
+
+  .card {
+    width: 80%; /* Adjust the card width to fit the screen width */
+    margin: 10px auto; /* Center the cards in the container */
+    max-height: none; /* Remove the maximum height to allow cards to expand with content */
+    transform: none; /* Reset the transformation on hover */
+  }
+}
+
